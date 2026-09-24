@@ -1,0 +1,19 @@
+# Ignore persistent container data & databases
+**/data/
+**/etc-pihole/
+**/etc-dnsmasq.d/
+**/grafana-data/
+**/prometheus-data/
+**/letsencrypt/
+**/open-webui/
+**/ollama/
+
+# Ignore environment files & secrets
+**/.env
+**/*.key
+**/*.pem
+
+# Ignore OS & editor files
+.DS_Store
+*.log
+Thumbs.db
