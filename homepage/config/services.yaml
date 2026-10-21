@@ -1,0 +1,39 @@
+- Management:
+    - Portainer:
+        icon: portainer.png
+        href: http://portainer.umbyx
+        description: "Docker Container Manager"
+        container: portainer
+    - Nginx Proxy Manager:
+        icon: nginx-proxy-manager.png
+        href: http://npm.umbyx
+        description: "Reverse Proxy & SSL"
+        container: npm
+
+- Network & Security:
+     - Pi-hole:
+        icon: pi-hole.png
+        href: http://pihole.umbyx/admin
+        description: "Ad-Blocker & Local DNS"
+        container: pihole
+
+- Monitoring:
+     - Uptime Kuma:
+        icon: uptime-kuma.png
+        href: http://kuma.umbyx
+        description: "Uptime & Discord Alerts"
+        container: uptime-kuma
+     - Grafana:
+        icon: grafana.png
+        href: http://grafana.umbyx
+        description: "Real-time Metrics & Dashboards"
+        container: grafana
+
+- Gaming:
+     - Minecraft Server:
+        icon: minecraft.png
+        description: "Java Dedicated Server"
+        container: minecraft
+        widget:
+          type: minecraft
+          url: udp://{{HOMEPAGE_VAR_LAN_IP}}:25565

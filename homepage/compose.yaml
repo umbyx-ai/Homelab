@@ -1,0 +1,15 @@
+services:
+  homepage:
+    image: ghcr.io/gethomepage/homepage:latest
+    container_name: homepage
+    restart: always
+    ports:
+      - "3005:3000"
+    volumes:
+      - ./config:/app/config
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      - PUID=1000
+      - PGID=985
+      - HOMEPAGE_ALLOWED_HOSTS=home.umbyx,${LAN_IP}:3005,${LAN_IP},${TAILSCALE_IP},${TAILSCALE_IP}:3005
+      - HOMEPAGE_VAR_LAN_IP=${LAN_IP}

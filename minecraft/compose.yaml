@@ -1,0 +1,18 @@
+services:
+  minecraft:
+    image: itzg/minecraft-server:latest
+    container_name: minecraft
+    restart: always
+    ports:
+      - "25565:25565"
+    environment:
+      EULA: "TRUE"
+      TYPE: "FABRIC"
+      VERSION: "LATEST"
+      INIT_MEMORY: "2G"
+      MAX_MEMORY: "4G"
+      TZ: "Europe/Madrid"
+    volumes:
+      - ./data:/data
+    tty: true
+    stdin_open: true

@@ -17,3 +17,9 @@
 .DS_Store
 *.log
 Thumbs.db
+
+# Homepage runtime logs
+homepage/config/logs/
+
+# Configuración local de backups
+backups/backup.env
